@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # stack_finance
 
 Stack Finance Todo Assessment Project Scratch
@@ -18,4 +17,4 @@ samples, guidance on mobile development, and a full API reference.
 =======
 # Flutter_Provider_Notes
 flutter Notes app using provider for state management 
->>>>>>> 06ebe1562f1d9f8db237a74009f2ab57ec9af9f2
+
