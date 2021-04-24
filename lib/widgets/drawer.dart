@@ -75,7 +75,7 @@ class AppDrawer extends StatelessWidget {
               ),
               children: [
                 const TextSpan(
-                  text: 'Flt',
+                  text: '',
                   style: TextStyle(
                     color: kAccentColorLight,
                     fontWeight: FontWeights.medium,

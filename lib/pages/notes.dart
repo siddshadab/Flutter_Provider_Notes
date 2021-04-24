@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:stack_finance/helper/icons.dart';
 import 'package:stack_finance/helper/styles.dart';
+import 'package:stack_finance/helper/utils.dart';
 import 'package:stack_finance/models/notes.dart';
 import 'package:stack_finance/models/user_model.dart';
 import 'package:stack_finance/services/notes.dart';
@@ -238,11 +239,19 @@ class _NoteEditorState extends State<NoteEditor> with CommandHandler {
   }
 
   /// Callback before the user leave the editor.
-  Future<bool> _onPop(String uid) {
+  Future<bool> _onPop(String uid) async{
     if (_isDirty && (_note.id != null || _note.isNotEmpty)) {
-      _note
-        ..modifiedAt = DateTime.now()
-        ..saveToFireStore(uid);
+      bool isInternetConnected = await checkInternet();
+      if(isInternetConnected){
+        _note
+          ..modifiedAt = DateTime.now()
+          ..saveToFireStore(uid);
+      }else{
+
+        _note
+          ..modifiedAt = DateTime.now()
+          ..saveOfflineStoreStore(uid);
+      }
     }
     return Future.value(true);
   }

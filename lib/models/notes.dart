@@ -160,7 +160,7 @@ String get filterName {
 String get emptyResultMessage {
   switch (this) {
     case NoteState.archived:
-      return 'Archived notes appear here';
+      // return 'Archived notes appear here';
     case NoteState.deleted:
       return 'Notes in trash appear here';
     default:
