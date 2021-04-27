@@ -1,3 +1,6 @@
+#Logs
+*.log
+
 
 **/google-services.json
 web/init-firebase.js
