@@ -1,22 +1,7 @@
-# Miscellaneous
-*.class
-*.log
-*.pyc
-*.swp
-.DS_Store
-.atom/
-.buildlog/
-.history
-.svn/
-bak/
 
-
-# Project-specific
-local.dart
-**/GoogleService-Info.plist
 **/google-services.json
 web/init-firebase.js
-artworks/*.mp4
+
 
 # IntelliJ related
 *.iml
